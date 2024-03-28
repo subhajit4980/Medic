@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { Route, RouterProvider,createBrowserRouter, createRoutesFromElements, useLoaderData } from 'react-router-dom'
+import { Route, RouterProvider,createBrowserRouter, createRoutesFromElements, useLoaderData,createHashRouter } from 'react-router-dom'
 import Home from './components/Home/Home.jsx'
 import About from './components/About/About.jsx'
 import Layout from './Layout.jsx'
@@ -35,7 +35,7 @@ const router1 = createBrowserRouter([
     ]
   }
 ])
-const router2=createBrowserRouter(
+const router2=createHashRouter(
   createRoutesFromElements(
     <Route path='/' element={<Layout/>}>
       <Route path='' element={<Home />}/>
